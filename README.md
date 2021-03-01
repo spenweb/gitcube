@@ -1,3 +1,9 @@
+# Git Cube - Be a git Power User
+Tips and topics surrounding git.
+
+## Credits
+Thank you creator of the 3d CSS/HTML cube on https://codepen.io/chinchang/pen/lLzyB! This cube was used as the base of this presentation.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
