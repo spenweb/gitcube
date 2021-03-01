@@ -7,15 +7,15 @@ const Bottom: FC<{ selected: boolean }> = ({ selected }) => {
   return (
     <Face side="bottom" selected={selected}>
       <Content>
-        <h2 tabIndex={makeIdx()}>Deployment with `git archive`</h2>
+        <h2 tabIndex={makeIdx()}>{"Pull Requests (PR) & Code Reviews"}</h2>
         <h2 tabIndex={makeIdx()}>Documentation</h2>
         <p>
           <a
-            href="https://git-scm.com/docs/git-archive"
+            href="https://git-scm.com/docs/git-pull"
             target="_blank"
             tabIndex={makeIdx()}
           >
-            https://git-scm.com/docs/git-archive
+            https://git-scm.com/docs/git-pull
           </a>
         </p>
       </Content>

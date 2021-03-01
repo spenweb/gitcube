@@ -19,25 +19,53 @@ const Front: FC<{ selected: boolean }> = ({ selected }) => {
           </a>
           !
         </h2>
-        <p>You'll find some amazing git things:</p>
+        <p>
+          You'll find some amazing git things! Here are some honorable mentions:
+        </p>
         <ul>
           <li>
-            <a href="https://git-scm.com/docs/git-instaweb" target="_blank">
+            <a
+              tabIndex={makeIdx()}
+              href="https://git-scm.com/docs/git-instaweb"
+              target="_blank"
+            >
               `git instaweb`
             </a>
           </li>
           <li>
-            <a href="https://git-scm.com/docs/git-notes" target="_blank">
+            <a
+              tabIndex={makeIdx()}
+              href="https://git-scm.com/docs/git-notes"
+              target="_blank"
+            >
               `git notes`
             </a>
           </li>
           <li>
-            <a href="https://git-scm.com/docs/git-blame" target="_blank">
+            <a
+              tabIndex={makeIdx()}
+              href="https://git-scm.com/docs/git-archive"
+              target="_blank"
+              rel="noreferrer"
+            >
+              `git archive`
+            </a>
+          </li>
+          <li>
+            <a
+              tabIndex={makeIdx()}
+              href="https://git-scm.com/docs/git-blame"
+              target="_blank"
+            >
               `git blame`
             </a>
           </li>
           <li>
-            <a href="https://git-scm.com/docs/git-stash" target="_blank">
+            <a
+              tabIndex={makeIdx()}
+              href="https://git-scm.com/docs/git-stash"
+              target="_blank"
+            >
               `git stash`
             </a>
           </li>

@@ -18,6 +18,13 @@ const Left: FC<{ selected: boolean }> = ({ selected }) => {
             https://git-scm.com/docs/git-rebase
           </a>
         </p>
+        <h2 tabIndex={makeIdx()}>Why rebase?</h2>
+        <p>
+          `git rebase` can be used as a "cleaner" alternative method to `git
+          merge`
+        </p>
+        <h2 tabIndex={makeIdx()}>Demo</h2>
+        <h2 tabIndex={makeIdx()}>Questions?</h2>
       </Content>
     </Face>
   );
