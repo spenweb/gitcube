@@ -14,7 +14,7 @@ const Front: FC<{ selected: boolean }> = ({ selected }) => {
         </p>
         <h2 tabIndex={makeIdx()}>
           Read the{" "}
-          <a href="https://git-scm.com/doc" target="_blank">
+          <a href="https://git-scm.com/doc" target="_blank" rel="noreferrer">
             documentation
           </a>
           !
@@ -28,6 +28,7 @@ const Front: FC<{ selected: boolean }> = ({ selected }) => {
               tabIndex={makeIdx()}
               href="https://git-scm.com/docs/git-instaweb"
               target="_blank"
+              rel="noreferrer"
             >
               `git instaweb`
             </a>
@@ -37,6 +38,7 @@ const Front: FC<{ selected: boolean }> = ({ selected }) => {
               tabIndex={makeIdx()}
               href="https://git-scm.com/docs/git-notes"
               target="_blank"
+              rel="noreferrer"
             >
               `git notes`
             </a>
@@ -56,6 +58,7 @@ const Front: FC<{ selected: boolean }> = ({ selected }) => {
               tabIndex={makeIdx()}
               href="https://git-scm.com/docs/git-blame"
               target="_blank"
+              rel="noreferrer"
             >
               `git blame`
             </a>
@@ -65,6 +68,7 @@ const Front: FC<{ selected: boolean }> = ({ selected }) => {
               tabIndex={makeIdx()}
               href="https://git-scm.com/docs/git-stash"
               target="_blank"
+              rel="noreferrer"
             >
               `git stash`
             </a>
@@ -78,7 +82,11 @@ const Front: FC<{ selected: boolean }> = ({ selected }) => {
         <p>
           Feel free to make a pull request (PR) into this presentation's'public
           git repository here:{" "}
-          <a href="https://github.com/spenweb/gitcube" target="_blank">
+          <a
+            href="https://github.com/spenweb/gitcube"
+            target="_blank"
+            rel="noreferrer"
+          >
             https://github.com/spenweb/gitcube
           </a>
           .

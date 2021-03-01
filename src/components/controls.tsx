@@ -20,6 +20,7 @@ const Controls: FC<{ setSelected: Function }> = ({ setSelected }) => {
       });
     });
     // TODO: Return unregister event listener function
+    // eslint-disable-next-line
   }, []);
 
   const handleClick = (side: string) => () => {

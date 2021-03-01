@@ -13,6 +13,7 @@ const Top: FC<{ selected: boolean }> = ({ selected }) => {
           <a
             href="https://git-scm.com/docs/git-checkout "
             target="_blank"
+            rel="noreferrer"
             tabIndex={makeIdx()}
           >
             https://git-scm.com/docs/git-checkout
