@@ -7,9 +7,9 @@ const makeIdx = (): number => {
   return index++;
 };
 
-const Front: FC = () => {
+const Front: FC<{ selected: boolean }> = ({ selected }) => {
   return (
-    <Face side="front">
+    <Face side="front" selected={selected}>
       <Content>
         <h1 tabIndex={makeIdx()}>Title</h1>
         <p>Some convincing content summary goes here.</p>

@@ -1,15 +1,39 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 
-const Controls: FC = () => {
+const sides = [
+  { sideName: "front", keyUp: "Digit1" },
+  { sideName: "right", keyUp: "Digit2" },
+  { sideName: "left", keyUp: "Digit3" },
+  { sideName: "top", keyUp: "Digit4" },
+  { sideName: "back", keyUp: "Digit5" },
+  { sideName: "bottom", keyUp: "Digit6" },
+];
+
+const Controls: FC<{ setSelected: Function }> = ({ setSelected }) => {
+  useEffect(() => {
+    document.addEventListener("keyup", (event) => {
+      console.log({ code: event.code });
+      sides.forEach(({ sideName, keyUp }) => {
+        if (event.code === keyUp) {
+          setSelected(sideName);
+        }
+      });
+    });
+    // TODO: Return unregister event listener function
+  }, []);
+
+  const handleClick = (side: string) => () => {
+    setSelected(side);
+  };
+
   return (
-    <>
-      <input type="radio" checked id="radio-front" name="select-face" />
-      <input type="radio" id="radio-left" name="select-face" />
-      <input type="radio" id="radio-right" name="select-face" />
-      <input type="radio" id="radio-top" name="select-face" />
-      <input type="radio" id="radio-bottom" name="select-face" />
-      <input type="radio" id="radio-back" name="select-face" />
-    </>
+    <ul className="controls">
+      {sides.map(({ sideName }, idx) => (
+        <li key={idx} onClick={handleClick(sideName)}>
+          {idx + 1}
+        </li>
+      ))}
+    </ul>
   );
 };
 
