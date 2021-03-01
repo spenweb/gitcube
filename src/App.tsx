@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// Original code from codepen.io
+// @see @https://codepen.io/chinchang/pen/lLzyB
 
+import React, { useState } from "react";
+import "./App.scss";
+import Controls from "./components/controls";
+import Cube from "./components/cube";
 function App() {
+  const [selected, setSelected] = useState<string>("front");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App selected-${selected}`}>
+      <div className="container">
+        <Cube selectedSide={selected} />
+      </div>
+      <Controls setSelected={setSelected} />
     </div>
   );
 }

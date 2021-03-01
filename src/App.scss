@@ -1,0 +1,158 @@
+// Original code from codepen.io
+// @see @https://codepen.io/chinchang/pen/lLzyB
+
+// toggle the cube dimensions here.
+$cubeWidth: 450px;
+$cubeHeight: 450px;
+$cubeDepth: $cubeHeight;
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* 3D Cube */
+.container {
+  perspective: 10000px;
+  width: $cubeWidth;
+  height: $cubeHeight;
+  text-align: center;
+  display: inline-block;
+}
+
+.cube {
+  display: inline-block;
+  transition: all 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(-15deg) rotateY(15deg);
+}
+
+.face {
+  overflow: auto;
+  position: absolute;
+  border: 1px solid #292929;
+  background: black;
+  background-size: auto 100%;
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1), 0 0 50px rgba(0, 0, 0, 0.3);
+  color: #333;
+  opacity: 0.94;
+}
+
+.front {
+  width: $cubeWidth;
+  height: $cubeHeight;
+  transform: translate3d(0, 0, $cubeDepth / 2);
+}
+
+.top {
+  width: $cubeWidth;
+  height: $cubeDepth;
+  transform: rotateX(90deg) translate3d(0, 0, $cubeHeight / 2);
+}
+
+.bottom {
+  width: $cubeWidth;
+  height: $cubeDepth;
+  transform: rotateX(-90deg) translate3d(0, 0, $cubeHeight / 2);
+}
+
+.left {
+  width: $cubeDepth;
+  height: $cubeHeight;
+  left: 50%;
+  margin-left: -$cubeDepth / 2;
+  transform: rotateY(-90deg) translate3d(0, 0, $cubeWidth / 2);
+}
+
+.right {
+  width: $cubeDepth;
+  height: $cubeHeight;
+  left: 50%;
+  margin-left: -$cubeDepth / 2;
+  transform: rotateY(90deg) translate3d(0, 0, $cubeWidth / 2);
+}
+
+.back {
+  width: $cubeWidth;
+  height: $cubeHeight;
+  transform: rotateY(180deg) translate3d(0, 0, $cubeDepth / 2);
+}
+
+.selected-left .container .cube {
+  transform: rotateY(90deg);
+}
+
+.selected-right .container .cube {
+  transform: rotateY(-90deg);
+}
+
+.selected-bottom .container .cube {
+  transform: rotateX(90deg);
+}
+
+.selected-top .container .cube {
+  transform: rotateX(-90deg);
+}
+
+.selected-back .container .cube {
+  transform: rotateY(180deg);
+}
+
+.content {
+  padding: 2em;
+  text-align: left;
+  height: $cubeWidth;
+  overflow: auto;
+
+  *:focus {
+    color: gold;
+    outline: none;
+  }
+
+  h1:focus::after,
+  h2:focus::after,
+  h3:focus::after,
+  a:focus::after {
+    content: "";
+    position: absolute;
+    width: 0.5em;
+    height: 1em;
+    margin-left: 0.2em;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    from {
+      background-color: black;
+    }
+    50% {
+      background-color: white;
+    }
+  }
+}
+
+.controls {
+  max-width: 100%;
+  width: 780px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 20px;
+  li {
+    color: rgb(59, 59, 59);
+    font-size: 4em;
+    cursor: pointer;
+    &:hover {
+      color: gold;
+    }
+  }
+}
