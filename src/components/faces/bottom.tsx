@@ -18,6 +18,14 @@ const Bottom: FC<{ selected: boolean }> = ({ selected }) => {
             https://git-scm.com/docs/git-pull
           </a>
         </p>
+        <p>
+          A pull request is just a fancy way of saying, "Please review my code
+          changes and merge it into the target branch". Gitlab, for example,
+          calls them Merge Requests (MR).
+        </p>
+        <p>There is much value to be had in a proper code review.</p>
+        <h2 tabIndex={makeIdx()}>Demo</h2>
+        <h2 tabIndex={makeIdx()}>Questions?</h2>
       </Content>
     </Face>
   );
