@@ -18,22 +18,22 @@ const Top: FC<{ selected: boolean }> = ({ selected }) => {
             https://git-scm.com/docs/git-checkout
           </a>
         </p>
+        <h2 tabIndex={makeIdx()}>Use case</h2>
+        <p>
+          Everyone makes mistakes. Plus, there are times when you decide that
+          you actually need that file you deleted a few weeks back.{" "}
+          <a
+            href="https://www.git-tower.com/learn/git/faq/restoring-deleted-files/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Here
+          </a>{" "}
+          is a detailed reference on how to restore deleted files in git.
+        </p>
+        <h3 tabIndex={makeIdx()}>Demo</h3>
+        <h3 tabIndex={makeIdx()}>Questions?</h3>
       </Content>
-      <h2 tabIndex={makeIdx()}>Use case</h2>
-      <p>
-        Everyone makes mistakes. Plus, there are times when you decide that you
-        actually need that file you deleted a few weeks back.{" "}
-        <a
-          href="https://www.git-tower.com/learn/git/faq/restoring-deleted-files/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Here
-        </a>{" "}
-        is a detailed reference on how to restore deleted files in git.
-      </p>
-      <h3 tabIndex={makeIdx()}>Demo</h3>
-      <h3 tabIndex={makeIdx()}>Questions?</h3>
     </Face>
   );
 };
