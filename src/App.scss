@@ -34,7 +34,7 @@ $cubeDepth: $cubeHeight;
 }
 
 .face {
-  overflow: hidden;
+  overflow: auto;
   position: absolute;
   border: 1px solid #292929;
   background: black;
@@ -107,7 +107,7 @@ $cubeDepth: $cubeHeight;
 .content {
   padding: 2em;
   text-align: left;
-  height: 100%;
+  height: $cubeWidth;
   overflow: auto;
 
   *:focus {
@@ -117,7 +117,8 @@ $cubeDepth: $cubeHeight;
 
   h1:focus::after,
   h2:focus::after,
-  h3:focus::after {
+  h3:focus::after,
+  a:focus::after {
     content: "";
     position: absolute;
     width: 0.5em;
