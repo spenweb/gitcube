@@ -26,7 +26,6 @@ $cubeDepth: $cubeHeight;
 .cube {
 	display: inline-block;
 	transition: all 0.85s cubic-bezier(0.175,0.885,0.320,1.275);
-  text-align: center;
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -43,7 +42,6 @@ $cubeDepth: $cubeHeight;
 	box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1),
  0 0 50px rgba(0, 0, 0, 0.3);
   color: #333;
-  line-height: $cubeWidth;
   opacity: 0.8;
 }
 
@@ -106,4 +104,36 @@ $cubeDepth: $cubeHeight;
   
 #radio-back:checked ~ .container .cube {
   transform: rotateY(180deg); 
+}
+
+
+.content {
+  padding: 2em;
+  text-align: left;
+  height: 100%;
+  overflow: auto;
+
+
+  *:focus {
+    color: gold;
+    outline: none;
+  }
+
+  h1:focus::after, h2:focus::after, h3:focus::after {
+    content: '';
+    position: absolute;
+    width: 0.5em;
+    height: 1em;
+    margin-left: 0.2em;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    from {
+      background-color: black;
+    }
+    50% {
+      background-color: white;
+    }
+  }
 }
