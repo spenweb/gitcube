@@ -9,7 +9,7 @@ const Front: FC<{ selected: boolean }> = ({ selected }) => {
       <Content>
         <h2 tabIndex={makeIdx()}>Be a Git Power User</h2>
         <p>
-          Git is a coder's best friend. I encourage you to get to know your best
+          Git is a coder's best friend! I encourage you to get to know your best
           friend.
         </p>
         <h2 tabIndex={makeIdx()}>
@@ -76,8 +76,8 @@ const Front: FC<{ selected: boolean }> = ({ selected }) => {
         </p>
         <h2 tabIndex={makeIdx()}>Contributing</h2>
         <p>
-          Feel free to make a pull request (PR) into this presentation's (and
-          web app's) public git repository here:{" "}
+          Feel free to make a pull request (PR) into this presentation's'public
+          git repository here:{" "}
           <a href="https://github.com/spenweb/gitcube" target="_blank">
             https://github.com/spenweb/gitcube
           </a>
