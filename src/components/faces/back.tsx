@@ -18,6 +18,20 @@ const Back: FC<{ selected: boolean }> = ({ selected }) => {
             https://git-scm.com/docs/git-reset
           </a>
         </p>
+        <h2 tabIndex={makeIdx()}>When to reset?</h2>
+        <p>
+          `git reset` can be used when wanting to undo a previous commit.
+          <a
+            href="https://devconnected.com/how-to-undo-last-git-commit/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Here
+          </a>{" "}
+          is a detailed article on some of the ways to use `git reset`.
+        </p>
+        <h2 tabIndex={makeIdx()}>Demo</h2>
+        <h2 tabIndex={makeIdx()}>Questions?</h2>
       </Content>
     </Face>
   );
