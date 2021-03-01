@@ -8,6 +8,16 @@ const Back: FC<{ selected: boolean }> = ({ selected }) => {
     <Face side="back" selected={selected}>
       <Content>
         <h2 tabIndex={makeIdx()}>Undo last commit</h2>
+        <h2 tabIndex={makeIdx()}>Documentation</h2>
+        <p>
+          <a
+            href="https://git-scm.com/docs/git-reset"
+            target="_blank"
+            tabIndex={makeIdx()}
+          >
+            https://git-scm.com/docs/git-reset
+          </a>
+        </p>
       </Content>
     </Face>
   );

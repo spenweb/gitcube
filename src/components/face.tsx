@@ -8,7 +8,7 @@ const Face: FC<{ side: string; selected: boolean }> = ({
   const faceRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (faceRef.current) {
+    if (selected && faceRef.current) {
       const firstHeader = faceRef.current.querySelector("h1,h2,h3");
       if (firstHeader) {
         (firstHeader as HTMLElement)?.focus();

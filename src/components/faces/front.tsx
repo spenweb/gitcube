@@ -43,8 +43,8 @@ const Front: FC<{ selected: boolean }> = ({ selected }) => {
           </li>
         </ul>
         <p>
-          Git is your friend. Understand your friend by reading the docs! Git's
-          documentation even has videos!
+          Learning git is a journey. Git is your friend. Understand your friend
+          by reading the docs! Git's documentation even has videos!
         </p>
         <h2 tabIndex={makeIdx()}>Contributing</h2>
         <p>
@@ -55,6 +55,7 @@ const Front: FC<{ selected: boolean }> = ({ selected }) => {
           </a>
           .
         </p>
+        <h2 tabIndex={makeIdx()}>End</h2>
       </Content>
     </Face>
   );

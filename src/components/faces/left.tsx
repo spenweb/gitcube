@@ -8,6 +8,16 @@ const Left: FC<{ selected: boolean }> = ({ selected }) => {
     <Face side="left" selected={selected}>
       <Content>
         <h2 tabIndex={makeIdx()}>Git rebase</h2>
+        <h2 tabIndex={makeIdx()}>Documentation</h2>
+        <p>
+          <a
+            href="https://git-scm.com/docs/git-rebase"
+            target="_blank"
+            tabIndex={makeIdx()}
+          >
+            https://git-scm.com/docs/git-rebase
+          </a>
+        </p>
       </Content>
     </Face>
   );

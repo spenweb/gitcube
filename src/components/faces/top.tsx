@@ -8,6 +8,16 @@ const Top: FC<{ selected: boolean }> = ({ selected }) => {
     <Face side="top" selected={selected}>
       <Content>
         <h2 tabIndex={makeIdx()}>Restore deleted file</h2>
+        <h2 tabIndex={makeIdx()}>Documentation</h2>
+        <p>
+          <a
+            href="https://git-scm.com/docs/git-checkout "
+            target="_blank"
+            tabIndex={makeIdx()}
+          >
+            https://git-scm.com/docs/git-checkout
+          </a>
+        </p>
       </Content>
     </Face>
   );

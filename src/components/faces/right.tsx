@@ -8,6 +8,16 @@ const Right: FC<{ selected: boolean }> = ({ selected }) => {
     <Face side="right" selected={selected}>
       <Content>
         <h2 tabIndex={makeIdx()}>Resolve merge conflicts</h2>
+        <h2 tabIndex={makeIdx()}>Documentation</h2>
+        <p>
+          <a
+            href="https://git-scm.com/docs/git-mergetool"
+            target="_blank"
+            tabIndex={makeIdx()}
+          >
+            https://git-scm.com/docs/git-mergetool
+          </a>
+        </p>
       </Content>
     </Face>
   );
